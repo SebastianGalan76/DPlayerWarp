@@ -12,9 +12,12 @@ import java.util.*;
 public enum Locale {
     NO_PERMISSION("noPermission", ""),
     RELOAD("reload", ""),
+    NO_PLAYER("noPlayer", ""),
     ONLY_PLAYER("onlyPlayer", ""),
     WARP_NOT_EXIST("warpNotExist", ""),
-
+    NO_REQUIRED_RANK("noRequiredRank", ""),
+    NOT_ENOUGH_TOKENS("notEnoughTokens", ""),
+    ONLY_OWN_CUBOID("onlyOwnCuboid", ""),
 
     TELEPORTATION_STARTED("teleportation.started", ""),
     TELEPORTATION_CANCELED("teleportation.canceled", ""),
@@ -23,7 +26,9 @@ public enum Locale {
     COMMAND_HELP_PLAYER("command.help.player", ""),
     COMMAND_HELP_ADMIN("command.help.admin", ""),
 
-
+    COMMAND_CREATE_SUCCESS("command.create.success", ""),
+    COMMAND_CREATE_ALREADY_HAVE("command.create.alreadyHave", ""),
+    COMMAND_CREATE_CONSOLE_USAGE("command.create.consoleUsage", ""),
 
 
     ;

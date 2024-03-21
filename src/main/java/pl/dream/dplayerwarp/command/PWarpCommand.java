@@ -9,6 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import pl.dream.dplayerwarp.DPlayerWarp;
 import pl.dream.dplayerwarp.Locale;
 import pl.dream.dplayerwarp.Utils;
+import pl.dream.dplayerwarp.command.subcommand.CreateSubcommand;
 import pl.dream.dplayerwarp.controller.TeleportationController;
 import pl.dream.dplayerwarp.data.Warp;
 import pl.dream.dreamlib.Message;
@@ -17,9 +18,13 @@ public class PWarpCommand implements CommandExecutor {
     private final DPlayerWarp plugin;
     private final TeleportationController teleportationController;
 
+    private final CreateSubcommand create;
+
     public PWarpCommand(DPlayerWarp plugin, TeleportationController teleportationController){
         this.plugin = plugin;
         this.teleportationController =  teleportationController;
+
+        create = new CreateSubcommand(plugin);
     }
 
     @Override
@@ -31,7 +36,7 @@ public class PWarpCommand implements CommandExecutor {
 
         if(args.length>1){
             if(args[0].equalsIgnoreCase("create")){
-
+                create.run(sender, cmd, label, args);
                 return true;
             }
             if(args[0].equalsIgnoreCase("delete")){

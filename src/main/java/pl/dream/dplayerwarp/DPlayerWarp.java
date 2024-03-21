@@ -14,11 +14,11 @@ public final class DPlayerWarp extends JavaPlugin {
     public TeleportationController teleportationController;
     public HashMap<String, Warp> warps;
     public HashMap<String, Integer> prices;
+    public SQLite database;
 
-    private SQLite database;
     private ConfigController configController;
 
-    
+
     @Override
     public void onEnable() {
         database = new SQLite(this);
