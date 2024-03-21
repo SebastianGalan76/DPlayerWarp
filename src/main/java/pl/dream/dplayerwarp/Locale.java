@@ -12,10 +12,19 @@ import java.util.*;
 public enum Locale {
     NO_PERMISSION("noPermission", ""),
     RELOAD("reload", ""),
+    ONLY_PLAYER("onlyPlayer", ""),
+    WARP_NOT_EXIST("warpNotExist", ""),
+
 
     TELEPORTATION_STARTED("teleportation.started", ""),
     TELEPORTATION_CANCELED("teleportation.canceled", ""),
     TELEPORTATION_EXECUTED("teleportation.executed", ""),
+
+    COMMAND_HELP_PLAYER("command.help.player", ""),
+    COMMAND_HELP_ADMIN("command.help.admin", ""),
+
+
+
 
     ;
 

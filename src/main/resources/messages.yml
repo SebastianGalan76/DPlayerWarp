@@ -1,6 +1,18 @@
 noPermission: "&cNie masz wymaganych uprawnień!"
 reload: "&aPlugin został prawidłowo przeładowany."
+onlyPlayer: "&cTylko gracz może wykonać tę komendę!"
+warpNotExist: "&cGracz &3{PLAYER} &7 nie posiada swojego warpa!"
 teleportation:
   started: "&7Zostaniesz przeteleportowany na warp gracza &3{PLAYER} &7za &3{DELAY} &7sekund."
   canceled: "&cTwoja teleportacja została przerwana!"
   executed: "&aZostałeś przeniesiony na warp gracza &3{PLAYER}&7."
+command:
+  help:
+    player:
+      - ""
+      - ""
+      - ""
+    admin:
+      - ""
+      - ""
+      - ""
