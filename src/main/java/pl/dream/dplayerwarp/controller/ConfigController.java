@@ -13,7 +13,7 @@ public class ConfigController {
     public void loadPlugin(){
         FileConfiguration config = plugin.getConfig();
 
-        plugin.teleportationDelay = config.getInt("teleportationDelay");
+        plugin.teleportationController.setDelay(config.getInt("teleportationDelay"));
 
         for(String rank:config.getConfigurationSection("prices.token").getKeys(false)){
             int price = config.getInt("prices.token."+rank);

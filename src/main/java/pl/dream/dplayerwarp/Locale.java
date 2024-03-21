@@ -12,6 +12,11 @@ import java.util.*;
 public enum Locale {
     NO_PERMISSION("noPermission", ""),
     RELOAD("reload", ""),
+
+    TELEPORTATION_STARTED("teleportation.started", ""),
+    TELEPORTATION_CANCELED("teleportation.canceled", ""),
+    TELEPORTATION_EXECUTED("teleportation.executed", ""),
+
     ;
 
     private final String path;
