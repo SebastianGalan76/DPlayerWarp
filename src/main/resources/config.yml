@@ -1,0 +1,6 @@
+teleportationDelay: 7
+prices:
+  token:
+    svip: 1000
+    elita: 250
+    legenda: 0
