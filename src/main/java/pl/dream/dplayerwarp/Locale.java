@@ -32,8 +32,6 @@ public enum Locale {
     COMMAND_DELETE_SUCCESS("command.delete.success", ""),
     COMMAND_DELETE_NOT_HAVE("command.delete.notHave", ""),
     COMMAND_DELETE_CONSOLE_USAGE("command.delete.consoleUsage", ""),
-
-
     ;
 
     private final String path;

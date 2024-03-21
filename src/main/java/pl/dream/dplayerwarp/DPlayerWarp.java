@@ -51,6 +51,7 @@ public final class DPlayerWarp extends JavaPlugin {
     private void loadPlugin(){
         saveDefaultConfig();
         Locale.loadMessages(this);
+
         configController.loadPlugin();
     }
 }

@@ -5,7 +5,7 @@ noPlayer: "&cNie ma takiego gracza na serwerze!"
 onlyPlayer: "&cTylko gracz może wykonać tę komendę!"
 warpNotExist: "&cGracz &3{PLAYER} &7 nie posiada swojego warpa!"
 notEnoughTokens: "&cNie masz wymaganej ilości tokenów. Potrzebujesz &3{AMOUNT} &ctokenów!"
-onlyOnCuboid: "&cWarp możesz stworzyć tylko na swojej działce."
+onlyOwnCuboid: "&cWarp możesz stworzyć tylko na swojej działce."
 teleportation:
   started: "&7Zostaniesz przeteleportowany na warp gracza &3{PLAYER} &7za &3{DELAY} &7sekund."
   canceled: "&cTwoja teleportacja została przerwana!"
@@ -13,13 +13,13 @@ teleportation:
 command:
   help:
     player:
-      - ""
-      - ""
-      - ""
+      - "/pwarp [NICK]"
+      - "/pwarp create"
+      - "/pwarp delete"
     admin:
-      - ""
-      - ""
-      - ""
+      - "/pwarp [NICK]"
+      - "/pwarp create"
+      - "/pwarp delete <NICK>"
   create:
     success: "&aStworzyłeś prawidłowo warp."
     alreadyHave: "&aPosiadasz już swój warp i nie możesz stworzyć kolejnego."

@@ -1,5 +1,6 @@
 package pl.dream.dplayerwarp.command;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -37,45 +38,42 @@ public class PWarpCommand implements CommandExecutor {
             return true;
         }
 
-        if(args.length>1){
-            if(args[0].equalsIgnoreCase("create")){
-                create.run(sender, cmd, label, args);
-                return true;
-            }
-            if(args[0].equalsIgnoreCase("delete")){
-                delete.run(sender,cmd,label,args);
-                return true;
-            }
-            if(args[0].equalsIgnoreCase("reload")){
-                if(Utils.checkPermission(sender, "dplayerwarp.admin")){
-                    plugin.reloadPlugin();
-                    Message.sendMessage(sender, Locale.RELOAD.toString());
-
-                    return true;
-                }
-            }
-
-            if(!(sender instanceof Player)){
-                Message.sendMessage(sender, Locale.ONLY_PLAYER.toString());
-                return true;
-            }
-
-            if(!Utils.checkPermission(sender, "dplayerwarp.pwarp")){
-                return true;
-            }
-
-            String warpName = args[0];
-            Player player = (Player) sender;
-            Warp warp = plugin.warps.get(warpName);
-
-            if(warp==null){
-                Message.sendMessage(sender, Locale.WARP_NOT_EXIST.toString()
-                        .replace("{PLAYER}", warpName));
-                return true;
-            }
-
-            teleportationController.startTeleportation(player, warp);
+        if (args[0].equalsIgnoreCase("create")) {
+            create.run(sender, cmd, label, args);
+            return true;
         }
+        if(args[0].equalsIgnoreCase("delete")){
+            delete.run(sender,cmd,label,args);
+            return true;
+        }
+        if(args[0].equalsIgnoreCase("reload")){
+            if(Utils.checkPermission(sender, "dplayerwarp.admin")){
+                plugin.reloadPlugin();
+                Message.sendMessage(sender, Locale.RELOAD.toString());
+
+                return true;
+            }
+        }
+
+
+        if(!(sender instanceof Player)){
+            Message.sendMessage(sender, Locale.ONLY_PLAYER.toString());
+            return true;
+        }
+        if(!Utils.checkPermission(sender, "dplayerwarp.pwarp")){
+            return true;
+        }
+
+        String warpName = args[0];
+        Player player = (Player) sender;
+        Warp warp = plugin.warps.get(warpName);
+        if(warp==null){
+            Message.sendMessage(sender, Locale.WARP_NOT_EXIST.toString()
+                    .replace("{PLAYER}", warpName));
+            return true;
+        }
+
+        teleportationController.startTeleportation(player, warp);
 
         return true;
     }
