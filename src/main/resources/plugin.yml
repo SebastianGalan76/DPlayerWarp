@@ -1,0 +1,5 @@
+name: DPlayerWarp
+version: '${project.version}'
+main: pl.dream.dplayerwarp.DPlayerWarp
+api-version: '1.20'
+authors: [DreaMPL]
