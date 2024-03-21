@@ -5,6 +5,7 @@ api-version: '1.20'
 depend:
   - DreamLib
   - DTokenManager
+  - WorldGuard
 authors: [DreaMPL]
 commands:
   pwarp:

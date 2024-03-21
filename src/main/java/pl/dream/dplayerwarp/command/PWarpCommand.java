@@ -10,6 +10,7 @@ import pl.dream.dplayerwarp.DPlayerWarp;
 import pl.dream.dplayerwarp.Locale;
 import pl.dream.dplayerwarp.Utils;
 import pl.dream.dplayerwarp.command.subcommand.CreateSubcommand;
+import pl.dream.dplayerwarp.command.subcommand.DeleteSubcommand;
 import pl.dream.dplayerwarp.controller.TeleportationController;
 import pl.dream.dplayerwarp.data.Warp;
 import pl.dream.dreamlib.Message;
@@ -19,12 +20,14 @@ public class PWarpCommand implements CommandExecutor {
     private final TeleportationController teleportationController;
 
     private final CreateSubcommand create;
+    private final DeleteSubcommand delete;
 
     public PWarpCommand(DPlayerWarp plugin, TeleportationController teleportationController){
         this.plugin = plugin;
         this.teleportationController =  teleportationController;
 
         create = new CreateSubcommand(plugin);
+        delete = new DeleteSubcommand(plugin);
     }
 
     @Override
@@ -40,7 +43,7 @@ public class PWarpCommand implements CommandExecutor {
                 return true;
             }
             if(args[0].equalsIgnoreCase("delete")){
-
+                delete.run(sender,cmd,label,args);
                 return true;
             }
             if(args[0].equalsIgnoreCase("reload")){

@@ -28,7 +28,10 @@ public enum Locale {
 
     COMMAND_CREATE_SUCCESS("command.create.success", ""),
     COMMAND_CREATE_ALREADY_HAVE("command.create.alreadyHave", ""),
-    COMMAND_CREATE_CONSOLE_USAGE("command.create.consoleUsage", ""),
+
+    COMMAND_DELETE_SUCCESS("command.delete.success", ""),
+    COMMAND_DELETE_NOT_HAVE("command.delete.notHave", ""),
+    COMMAND_DELETE_CONSOLE_USAGE("command.delete.consoleUsage", ""),
 
 
     ;

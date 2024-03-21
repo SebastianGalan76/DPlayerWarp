@@ -21,7 +21,6 @@ import pl.dream.dtokenmanager.exception.NumberLessThanZeroException;
 
 public class CreateSubcommand {
     private final DPlayerWarp plugin;
-
     public CreateSubcommand(DPlayerWarp plugin){
         this.plugin = plugin;
     }
@@ -29,7 +28,7 @@ public class CreateSubcommand {
     public void run(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String label, @NotNull String[] args){
         if(args.length==1){
             if(!(sender instanceof Player)){
-                Message.sendMessage(sender, Locale.COMMAND_CREATE_CONSOLE_USAGE.toString());
+                Message.sendMessage(sender, Locale.ONLY_PLAYER.toString());
                 return;
             }
             if(!sender.hasPermission("dplayerwarp.pwarp.create")){
@@ -66,6 +65,9 @@ public class CreateSubcommand {
             }catch (NumberLessThanZeroException e){
                 Message.sendMessage(sender, Locale.NO_REQUIRED_RANK.toString());
             }
+        }
+        else{
+            showHelp(sender);
         }
     }
 
@@ -104,5 +106,14 @@ public class CreateSubcommand {
             }
         }
         return false;
+    }
+
+    private void showHelp(@NotNull CommandSender sender){
+        if(sender.hasPermission("dplayerwarp.admin")){
+            Message.sendMessage(sender, Locale.COMMAND_HELP_ADMIN.getList());
+        }
+        else{
+            Message.sendMessage(sender, Locale.COMMAND_HELP_PLAYER.getList());
+        }
     }
 }

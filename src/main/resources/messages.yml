@@ -23,4 +23,7 @@ command:
   create:
     success: "&aStworzyłeś prawidłowo warp."
     alreadyHave: "&aPosiadasz już swój warp i nie możesz stworzyć kolejnego."
-    consoleUsage: "&7Poprawne użycie &c/pwarp create [nick]"
+  delete:
+    success: "&aUsunąłeś prawidłowo warp."
+    notHave: "&aNie posiadasz swojego warpa."
+    consoleUsage: "&7Poprawne użycie &c/pwarp delete [nick]"
